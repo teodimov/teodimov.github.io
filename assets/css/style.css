@@ -1,0 +1,152 @@
+body, html {
+        height: 80%;
+        margin: 0;
+        font-family: 'Helvetica', sans-serif; /* Using a sans-serif font */
+    }
+
+    body {
+        background-color: #000; /* Black background */
+        color: #fff; /* White text color */
+    }
+
+    .name h1 {
+        font-size: 4em;
+        font-weight: bold;
+        background: -webkit-linear-gradient(#C9F, #0F79D0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    a {
+        text-decoration: none;
+        color: #0F79D0;
+        text-shadow: none;    
+    }
+
+    a:hover,a:focus {
+        text-decoration: none;
+        color: #0a4f89;
+    }
+
+    .social-icons-container a {
+            margin: 0 20px;
+    }
+
+    .desktop-container {
+        margin: 5% 10% 10% 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobile-container {
+            display: none;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 20px;
+    }
+
+    .left-column {
+        grid-column: 1 / 2;
+        padding: 20px; /* Adding padding inside the left column */
+    }
+
+    .right-column {
+        grid-column: 2 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 20px; /* Adding padding inside the right column */
+    }
+
+    .right-column img {
+        max-width: 100%;
+        height: auto;
+    }
+
+p {
+        font-size: 1.3em;
+}
+
+.social-icons-container {
+        text-align: center;
+        font-size: 2em;
+}
+
+.fa {
+        margin: 0 30px;
+        background: -webkit-linear-gradient(#C9F, #0F79D0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.right-column .social-icons-container {
+        display: block;
+        width: 200%;
+        margin-top: 15%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr; /* Change the grid to a single column */
+  }
+
+  .right-column {
+    grid-column: auto; /* Reset the grid-column property */
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1700px) {
+  .content {
+    gap: 10px; /* Adjust the gap between grid items */
+  }
+
+  .right-column {
+          justify-content: center;
+          align-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .mobile-container {
+          display: flex;
+          margin: -5% 5% 10% 5%;
+  }
+        
+  .desktop-container {
+          display: none;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .left-column {
+    width: 100%;
+  }
+
+  .left-column {
+          padding: 0px;
+  }
+
+  .right-column {
+          display: grid;
+          justify-content: center;
+          gap: 10px;
+  }
+
+  p {
+          font-size: 1.1em;
+  }
+
+  .name h1 {
+          font-size: 3.5em;
+          margin-top: 16%;
+  }
+}
